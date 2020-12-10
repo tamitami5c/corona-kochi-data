@@ -36,7 +36,7 @@ def main():
     file_name=download_file(url)
     #日付とその日の陽性者数をセットしていく
     data={}
-    with open(file_name) as f:
+    with open(file_name,encoding="utf-8") as f:
         reader=csv.reader(f)
         _=next(reader) #headerは飛ばす
         
