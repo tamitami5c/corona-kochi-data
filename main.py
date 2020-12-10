@@ -16,7 +16,6 @@ def download_file(url):
     response=requests.get(url)
     if response.status_code!=requests.codes.ok:
         raise Exception("status_code!=200")
-    response.encoding=response.apparent_encoding
 
     with open(file_name,"wb") as f:
         f.write(response.content)
